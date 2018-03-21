@@ -1,0 +1,16 @@
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\bin\Debug\Lateetud.NServiceBus.Common.dll
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\bin\Debug\Lateetud.NServiceBus.Common.pdb
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\bin\Debug\Newtonsoft.Json.dll
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\bin\Debug\NServiceBus.Core.dll
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\bin\Debug\NServiceBus.Persistence.Sql.dll
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\bin\Debug\Newtonsoft.Json.xml
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\bin\Debug\NServiceBus.Core.pdb
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\bin\Debug\NServiceBus.Core.xml
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\bin\Debug\NServiceBus.Persistence.Sql.pdb
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\bin\Debug\NServiceBus.Persistence.Sql.xml
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\obj\Debug\Lateetud.NServiceBus.Common.Messages.resources
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\obj\Debug\Lateetud.NServiceBus.Common.csproj.GenerateResource.Cache
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\obj\Debug\Lateetud.NServiceBus.Common.csproj.CoreCompileInputs.cache
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\obj\Debug\Lateetud.NServiceBus.Common.dll
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\obj\Debug\Lateetud.NServiceBus.Common.pdb
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\obj\Debug\Lateetud.NServiceBus.Common.csprojResolveAssemblyReference.cache

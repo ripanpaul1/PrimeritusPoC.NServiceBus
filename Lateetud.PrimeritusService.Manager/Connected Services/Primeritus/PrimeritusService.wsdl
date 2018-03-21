@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CreatePublisherQueues">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreatePublisherQueuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreatePublisherQueuesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InvokeXmlService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XmlString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InvokeXmlServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InvokeXmlServiceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreatePublisherQueuesSoapIn">
+    <wsdl:part name="parameters" element="tns:CreatePublisherQueues" />
+  </wsdl:message>
+  <wsdl:message name="CreatePublisherQueuesSoapOut">
+    <wsdl:part name="parameters" element="tns:CreatePublisherQueuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="InvokeXmlServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:InvokeXmlService" />
+  </wsdl:message>
+  <wsdl:message name="InvokeXmlServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:InvokeXmlServiceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PrimeritusServiceSoap">
+    <wsdl:operation name="CreatePublisherQueues">
+      <wsdl:input message="tns:CreatePublisherQueuesSoapIn" />
+      <wsdl:output message="tns:CreatePublisherQueuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InvokeXmlService">
+      <wsdl:input message="tns:InvokeXmlServiceSoapIn" />
+      <wsdl:output message="tns:InvokeXmlServiceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PrimeritusServiceSoap" type="tns:PrimeritusServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreatePublisherQueues">
+      <soap:operation soapAction="http://tempuri.org/CreatePublisherQueues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvokeXmlService">
+      <soap:operation soapAction="http://tempuri.org/InvokeXmlService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PrimeritusServiceSoap12" type="tns:PrimeritusServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreatePublisherQueues">
+      <soap12:operation soapAction="http://tempuri.org/CreatePublisherQueues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvokeXmlService">
+      <soap12:operation soapAction="http://tempuri.org/InvokeXmlService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PrimeritusService">
+    <wsdl:port name="PrimeritusServiceSoap" binding="tns:PrimeritusServiceSoap">
+      <soap:address location="http://localhost:53977/api/PrimeritusService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PrimeritusServiceSoap12" binding="tns:PrimeritusServiceSoap12">
+      <soap12:address location="http://localhost:53977/api/PrimeritusService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

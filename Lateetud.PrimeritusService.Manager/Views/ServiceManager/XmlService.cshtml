@@ -1,0 +1,165 @@
+﻿@using Lateetud.Utilities.Models;
+@model List<FileModel>
+@{
+    Layout = "~/Views/Shared/_LayoutPrimeritus.cshtml";
+}
+<link href="@Url.Content("~/Content/Gridmvc.css")" rel="stylesheet" />
+<script src="@Url.Content("~/Scripts/gridmvc.min.js")"></script>
+<style>
+    .green {
+        color: green;
+    }
+
+    .red {
+        color: red;
+    }
+</style>
+<br />
+<div class="container">
+    <h2 class="sub-header" style="color:cadetblue">@ViewBag.Title</h2>
+    <hr />
+    <div class="form-horizontal">
+        <div>
+            <div class="row">
+                <div class="col-md-12">
+                    @if (Model == null)
+                    {
+                        <div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a class="btn btn-info" href="@Url.Action("XmlService","ServiceManager")">Back</a>
+                                </div>
+                            </div>
+                            <div class="row">&nbsp;</div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    The process has been failed. Please try again.
+                                </div>
+                            </div>
+                            <div class="row">&nbsp;</div>
+                        </div>
+                    }
+                    else if (Model.Count <= 0)
+                    {
+                        using (Html.BeginForm("XmlService", "ServiceManager", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <div>
+                                <div class="row" id="divXmlBrowser">
+                                    <div class="col-md-12">
+                                        <br /><br />
+                                        <div>
+                                            <button id="btnXmlBrowser" type="button" class="btn btn-info" onclick="document.getElementById('files').click()">Choose Xml Files</button>
+                                            <br />
+                                            <div style="font-style:italic">Please choose xml files to start publishing message to NServiceBus</div>
+                                        </div>
+
+                                        <input type="file" name="files" id="files" multiple="true" class="control-label" style="display:none" />
+                                        <br /><br /><br /><br /><br /><br />
+                                    </div>
+                                </div>
+                                <div class="row" id="divXmlFiles">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive" style="width:100%; max-height: 300px; overflow-y:auto">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr style="background-color:lightseagreen">
+                                                        <th>File Name</th>
+                                                        <th>Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="tbodyXmlFilesItem"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="divXmlRead">
+                                    <div class="col-md-12">
+                                        <br />
+                                        <input id="btnCancel" type="button" value="Cancel" class="btn btn-danger" />
+                                        &nbsp;&nbsp;&nbsp;
+                                        <input type="submit" value="Publish to NServiceBus" class="btn btn-success" />
+                                    </div>
+                                </div>
+                                <div class="row">&nbsp;</div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a class="btn btn-info" href="@Url.Action("XmlService","ServiceManager")">Back</a>
+                                </div>
+                            </div>
+                            <div class="row">&nbsp;</div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive" style="width:100%; max-height: 300px; overflow-y:auto">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr style="background-color:lightseagreen">
+                                                    <th>File Name</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @if (Model.Count > 0)
+                                                {
+                                                    for (var ic = 0; ic < Model.Count; ic++)
+                                                    {
+                                                        if (Model[ic].Status == Lateetud.Utilities.PStatus.Success)
+                                                        {
+                                                            <tr class="green"><td>@Model[ic].OriginalFileName</td><td>@Model[ic].StatusText</td></tr>
+                                                        }
+                                                        else if (Model[ic].Status == Lateetud.Utilities.PStatus.Failed || Model[ic].Status == Lateetud.Utilities.PStatus.Error)
+                                                        {
+                                                            <tr class="red"><td>@Model[ic].OriginalFileName</td><td>@Model[ic].StatusText</td></tr>
+                                                        }
+                                                    }
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">&nbsp;</div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#divXmlBrowser').show();
+        $('#divXmlRead').hide();
+        $('#divXmlFiles').hide();
+
+        $('#files').change(function () {
+            $('#divXmlBrowser').hide();
+            $('#divXmlRead').show();
+            $('#divXmlFiles').show();
+            $('#tbodyXmlFilesItem').empty();
+
+            var names = $.map($('#files').prop("files"), function (val) { return val.name; });
+            if (names.length > 0) {
+                for (var ic = 0; ic < names.length; ic++) {
+                    $('#tbodyXmlFilesItem').append("<tr><td>" + names[ic] + "</td><td>Pending</td></tr>");
+                }
+            }
+        });
+
+        $('#btnCancel').click(function () {
+            $('#divXmlBrowser').show();
+            $('#divXmlRead').hide();
+            $('#divXmlFiles').hide();
+            $('#files').val('');
+            $('#tbodyXmlFilesItem').empty();
+        });
+    });
+</script>

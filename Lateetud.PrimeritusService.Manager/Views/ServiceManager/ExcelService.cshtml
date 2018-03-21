@@ -1,0 +1,78 @@
+﻿@using Lateetud.Utilities;
+@using Lateetud.PrimeritusService.Manager.Models;
+@model VMExcel
+@{
+    Layout = "~/Views/Shared/_LayoutPrimeritus.cshtml";
+}
+
+<br />
+<div class="container">
+    <h4>@ViewBag.Title</h4>
+    <hr /><br />
+    <div class="form-horizontal">
+        @if (Model.Status == PStatus.None)
+        {
+            using (Html.BeginForm("ExcelService", "ServiceManager", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    @Html.Label("Choose excel", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input type="file" name="file" id="file" class="control-label" />
+                        @Html.ValidationMessage("file", new { @class = "text-danger", @data_val = "true", @data_val_required = "You have not specified a excel file" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Enter Sheetname", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBox("SheetName", null, htmlAttributes: new { @class = "control-label col-md-2" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Convert to Xml" class="btn btn-default" />
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        Original excel: @Model.OriginalExcelFileName
+                    </div>
+                </div>
+                <div class="row">&nbsp;</div>
+                @if (Model.Status == PStatus.Success)
+                {
+                    <div class="row">
+                        <div class="col-md-2 text-left">
+                            @Html.ActionLink("Back", "ExcelService", "ServiceManager", htmlAttributes: new { @class = "btn btn-default" })
+                        </div>
+                    </div>
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            @Html.TextArea("txtXml", Model.Message, new { @style = "height:200px;width:100%", @readonly = "readonly", @disabled = "disabled" })
+                        </div>
+                    </div>
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-md-2 text-left">
+                            @Html.ActionLink("Back", "ExcelService", "ServiceManager", htmlAttributes: new { @class = "btn btn-default" })
+                        </div>
+                    </div>
+                }
+                else if (Model.Status == PStatus.Error || Model.Status == PStatus.Failed)
+                {
+                    <div class="row">
+                        <div class="col-md-12">
+                            @Model.Message
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>
