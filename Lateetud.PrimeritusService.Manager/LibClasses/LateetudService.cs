@@ -547,7 +547,7 @@ namespace Lateetud.PrimeritusService.Manager.LibClasses
                             xml_fullcontent.Append(xml.ToString());
 
                             // create the file
-                            vMExcel.ConvertedXmlFileName = DateTime.Now.ToString("yyyyMMdd") + "-" + DateTime.Now.ToString("HHmmssfff") + "-" + Path.GetFileNameWithoutExtension(vMExcel.OriginalExcelFileName) + ".xml";
+                            vMExcel.ConvertedXmlFileName = DateTime.Now.ToString("yyyyMMdd") + "-" + DateTime.Now.ToString("HHmmssfff") + "-" + new RandomGenerator().RandomGuid() + "-" + Path.GetFileNameWithoutExtension(vMExcel.OriginalExcelFileName) + ".xml";
                             string strxmlDir = Path.Combine(rootPath, DirXml, strdatetime);
                             if (!Directory.Exists(strxmlDir)) Directory.CreateDirectory(strxmlDir);
                             vMExcel.ConvertedXmlFilePath = Path.Combine(strxmlDir, vMExcel.ConvertedXmlFileName);
