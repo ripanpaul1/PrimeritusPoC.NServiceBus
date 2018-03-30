@@ -1,5 +1,9 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Lateetud.NServiceBus.Subscriber.Properties" GeneratedClassName="Settings">
   <Profiles />
-  <Settings />
+  <Settings>
+    <Setting Name="Lateetud_NServiceBus_Subscriber_com_renovo_test_aptest_RequestAssignment" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://aptest.test.renovo.com/WS/RequestAssignment.asmx</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
