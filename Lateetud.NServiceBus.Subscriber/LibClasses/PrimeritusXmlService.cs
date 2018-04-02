@@ -3,6 +3,7 @@ using Lateetud.Utilities.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.Text;
 using System.Xml.Serialization;
 
@@ -470,11 +471,11 @@ namespace Lateetud.NServiceBus.Subscriber.LibClasses
         {
             try
             {
-                //com.renovo.test.aptest.AssignmentRequest assignment = new com.renovo.test.aptest.AssignmentRequest();
-                //System.Net.ServicePointManager.ServerCertificateValidationCallback = ((sender, cert, chain, errors) => cert.Subject.Contains("test.renovo.com"));
-                //assignment.Credentials = new NetworkCredential("rpaul", "Recovery@1991");
-                //if (assignment._AssignmentRequest(aurastring) <= 0) return false;
-                return true;
+				com.renovo.test.aptest.RequestAssignment assignment = new com.renovo.test.aptest.RequestAssignment();
+				System.Net.ServicePointManager.ServerCertificateValidationCallback = ((sender, cert, chain, errors) => cert.Subject.Contains("test.renovo.com"));
+				assignment.Credentials = new NetworkCredential("rpaul", "Recovery@1991");
+				if (assignment._RequestAssignment(aurastring) <= 0) return false;
+				return true;
             }
             catch
             {

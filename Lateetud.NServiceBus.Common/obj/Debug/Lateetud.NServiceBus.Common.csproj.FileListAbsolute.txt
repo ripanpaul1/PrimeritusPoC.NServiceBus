@@ -13,3 +13,4 @@ E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\obj\Debug\La
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\obj\Debug\Lateetud.NServiceBus.Common.csproj.CoreCompileInputs.cache
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\obj\Debug\Lateetud.NServiceBus.Common.dll
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\obj\Debug\Lateetud.NServiceBus.Common.pdb
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Common\obj\Debug\Lateetud.NServiceBus.Common.csprojResolveAssemblyReference.cache
