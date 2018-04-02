@@ -36,7 +36,7 @@ E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.DAL\bin\Debug\Entit
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.DAL\bin\Debug\EntityFramework.SqlServer.dll
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.DAL\bin\Debug\EntityFramework.xml
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.DAL\obj\Debug\Lateetud.NServiceBus.DAL.csprojResolveAssemblyReference.cache
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.DAL\obj\Debug\Lateetud.NServiceBus.DAL.csproj.CoreCompileInputs.cache
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.DAL\obj\Debug\Lateetud.NServiceBus.DAL.dll
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.DAL\obj\Debug\Lateetud.NServiceBus.DAL.pdb
-E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.DAL\obj\Debug\Lateetud.NServiceBus.DAL.csprojResolveAssemblyReference.cache

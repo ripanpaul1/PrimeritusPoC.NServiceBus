@@ -69,8 +69,8 @@ namespace Lateetud.PrimeritusService.Manager.LibClasses
                             xml.Append("<ClientAccountNumber>" + Convert.ToString(dtexcel.Rows[row]["F17"]).Trim() + "</ClientAccountNumber>");
                             // F18 - LoanNumber < CLIENTLOANNUMBER ></ CLIENTLOANNUMBER >
                             xml.Append("<LoanNumber>" + Convert.ToString(dtexcel.Rows[row]["F18"]).Trim() + "</LoanNumber>");
-                            // F18 - LienHolder < LienHolder ></ LienHolder >
-                            xml.Append("<LienHolder>" + Convert.ToString(dtexcel.Rows[row]["F32"]).Trim() + "</LienHolder>");
+                            // F34 - LienHolder < LienHolder ></ LienHolder >
+                            xml.Append("<LienHolder>" + Convert.ToString(dtexcel.Rows[row]["F34"]).Trim() + "</LienHolder>");
                             // F19 - Year < YEAR ></ YEAR >
                             xml.Append("<Year>" + Convert.ToString(dtexcel.Rows[row]["F19"]).Trim() + "</Year>");
                             // F20 - Make < MAKE ></ MAKE >
