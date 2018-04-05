@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<Vendor_AssignmentRecord_v13 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ClientName>
+  </ClientName>
+  <AssignmentTypeName>Involuntary</AssignmentTypeName>
+  <AssignmentIdentity>
+  </AssignmentIdentity>
+  <ClientAccountNumber>15127797</ClientAccountNumber>
+  <LoanNumber>719828</LoanNumber>
+  <LienHolder>Santander Consumer USA 2nd Placement</LienHolder>
+  <Year>2008</Year>
+  <Make>Dodge</Make>
+  <Model>Caliber</Model>
+  <Vin>1B3HB28B38D738525</Vin>
+  <ClientContact>Unassigned Needs Review</ClientContact>
+  <CollateralType>Automobile</CollateralType>
+  <ClientCompanyID>2385</ClientCompanyID>
+  <Persons>
+    <Person>
+      <First_Name>Ardrea Swain</First_Name>
+      <SSN>579248592</SSN>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+    </Person>
+    <Person>
+      <First_Name>MANUEL SOLIS</First_Name>
+      <SSN>579248712</SSN>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+    </Person>
+  </Persons>
+  <Addresses>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>14200 LINDEN AVE N  #111A (P3 GARAGE)</Address_Line_1>
+      <City>SEATLLE</City>
+      <State>WA</State>
+      <Zip_Code>98133</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>1123 East South Ave</Address_Line_1>
+      <City>Ponca City</City>
+      <State>OK</State>
+      <Zip_Code>74601</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Address_Line_1>2808 W MCMURTRY</Address_Line_1>
+      <City>STILLWATER</City>
+      <State>OK</State>
+      <Zip_Code>74075</Zip_Code>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Address_Line_1>426 Locust St</Address_Line_1>
+      <City>Mc Kees Rocks</City>
+      <State>PA</State>
+      <Zip_Code>15136</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+  </Addresses>
+  <ContactInformation>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>409-670-5647</Phone_Number>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>916-390-4218</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Phone_Number>201-342-2155</Phone_Number>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Phone_Number>555898441</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+  </ContactInformation>
+</Vendor_AssignmentRecord_v13>

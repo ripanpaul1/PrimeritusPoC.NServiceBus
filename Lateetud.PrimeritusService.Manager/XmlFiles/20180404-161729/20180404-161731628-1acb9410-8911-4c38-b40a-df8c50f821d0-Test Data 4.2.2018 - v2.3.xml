@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Vendor_AssignmentRecord_v13 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ClientName>
+  </ClientName>
+  <AssignmentTypeName>Involuntary</AssignmentTypeName>
+  <AssignmentIdentity>
+  </AssignmentIdentity>
+  <ClientAccountNumber>15216361</ClientAccountNumber>
+  <LoanNumber>6937318</LoanNumber>
+  <LienHolder>Chrysler Capital</LienHolder>
+  <Year>2010</Year>
+  <Make>Dodge</Make>
+  <Model>Caliber</Model>
+  <Vin>1B3CB4HA5AD664852</Vin>
+  <ClientContact>Unassigned Needs Review</ClientContact>
+  <CollateralType>Automobile</CollateralType>
+  <ClientCompanyID>1084</ClientCompanyID>
+  <Persons>
+    <Person>
+      <First_Name>Jerry Beech</First_Name>
+      <SSN>579248281</SSN>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+    </Person>
+    <Person>
+      <First_Name>SATRICE A BLAKE</First_Name>
+      <SSN>579248401</SSN>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+    </Person>
+  </Persons>
+  <Addresses>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>4247 FERGUS ST</Address_Line_1>
+      <City>CINCINNATI</City>
+      <State>OH</State>
+      <Zip_Code>45223</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>290 HARRISON AVE</Address_Line_1>
+      <City>MORRISVILLE</City>
+      <State>PA</State>
+      <Zip_Code>19067</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Address_Line_1>1590 ARLINE AVE</Address_Line_1>
+      <City>ABINGTON</City>
+      <State>PA</State>
+      <Zip_Code>19001</Zip_Code>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Address>
+  </Addresses>
+  <ContactInformation>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>605-936-1792</Phone_Number>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>201-887-5645</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Phone_Number>201-342-1844</Phone_Number>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Phone_Number>555898130</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+  </ContactInformation>
+</Vendor_AssignmentRecord_v13>

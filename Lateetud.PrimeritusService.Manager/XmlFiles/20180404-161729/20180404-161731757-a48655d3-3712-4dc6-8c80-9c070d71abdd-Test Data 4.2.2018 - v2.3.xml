@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<Vendor_AssignmentRecord_v13 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ClientName>
+  </ClientName>
+  <AssignmentTypeName>Involuntary</AssignmentTypeName>
+  <AssignmentIdentity>
+  </AssignmentIdentity>
+  <ClientAccountNumber>15151131</ClientAccountNumber>
+  <LoanNumber>6453201</LoanNumber>
+  <LienHolder>Santander Consumer USA</LienHolder>
+  <Year>2010</Year>
+  <Make>Ford</Make>
+  <Model>F-250 SD</Model>
+  <Vin>1FTSX2BR5AEB16682</Vin>
+  <ClientContact>Unassigned Needs Review</ClientContact>
+  <CollateralType>Automobile</CollateralType>
+  <ClientCompanyID>1084</ClientCompanyID>
+  <Persons>
+    <Person>
+      <First_Name>Marilyn Fields</First_Name>
+      <SSN>579248443</SSN>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+    </Person>
+    <Person>
+      <First_Name>JONMICHAEL SMITH</First_Name>
+      <SSN>579248563</SSN>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+    </Person>
+  </Persons>
+  <Addresses>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>10350 DOVER ST APT. # E17</Address_Line_1>
+      <City>WESTMINSTER</City>
+      <State>CO</State>
+      <Zip_Code>80003</Zip_Code>
+      <Debtor_Address_Type_Name>1</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>1055 EASLEY HWY</Address_Line_1>
+      <City>PELZER</City>
+      <State>SC</State>
+      <Zip_Code>29669</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Address_Line_1>152 POSSUM HOLLER RD</Address_Line_1>
+      <City>PICKENS</City>
+      <State>SC</State>
+      <Zip_Code>29671</Zip_Code>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Address_Line_1>416 HWY 49W</Address_Line_1>
+      <City>MILLEDGEVILLE</City>
+      <State>GA</State>
+      <Zip_Code>31061</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+  </Addresses>
+  <ContactInformation>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>512-799-7709</Phone_Number>
+      <Debtor_Address_Type_Name>1</Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>310-925-9261</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Phone_Number>201-342-2006</Phone_Number>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Phone_Number>555898292</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+  </ContactInformation>
+</Vendor_AssignmentRecord_v13>

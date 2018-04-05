@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<Vendor_AssignmentRecord_v13 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ClientName>
+  </ClientName>
+  <AssignmentTypeName>Involuntary</AssignmentTypeName>
+  <AssignmentIdentity>
+  </AssignmentIdentity>
+  <ClientAccountNumber>15192422</ClientAccountNumber>
+  <LoanNumber>878533</LoanNumber>
+  <LienHolder>Santander Consumer USA - Skip 4th Placement</LienHolder>
+  <Year>2010</Year>
+  <Make>Dodge</Make>
+  <Model>Charger</Model>
+  <Vin>2B3CA3CV3AH259048</Vin>
+  <ClientContact>Unassigned</ClientContact>
+  <CollateralType>Automobile</CollateralType>
+  <ClientCompanyID>1084</ClientCompanyID>
+  <Persons>
+    <Person>
+      <First_Name>Deshante Collins</First_Name>
+      <SSN>579248027</SSN>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+    </Person>
+    <Person>
+      <First_Name>Al'Trevon Henry</First_Name>
+      <SSN>579248147</SSN>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+    </Person>
+  </Persons>
+  <Addresses>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>2711 BROWNSVILLE RD APT 5</Address_Line_1>
+      <City>PITTSBURGH</City>
+      <State>PA</State>
+      <Zip_Code>15227</Zip_Code>
+      <Debtor_Address_Type_Name>1</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>8450 E Adamo Dr</Address_Line_1>
+      <City>Tampa</City>
+      <State>FL</State>
+      <Zip_Code>33619</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Address_Line_1>7209 OCONTO DR APT 307</Address_Line_1>
+      <City>NEW PORT RICHEY</City>
+      <State>FL</State>
+      <Zip_Code>34655</Zip_Code>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Address_Line_1>957 SICKLERVILLE RD</Address_Line_1>
+      <City>SICKLERVILLE</City>
+      <State>NJ</State>
+      <Zip_Code>8081</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+  </Addresses>
+  <ContactInformation>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>765-230-0122</Phone_Number>
+      <Debtor_Address_Type_Name>1</Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>912-220-2856</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Phone_Number>201-342-1590</Phone_Number>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Phone_Number>555897876</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+  </ContactInformation>
+</Vendor_AssignmentRecord_v13>

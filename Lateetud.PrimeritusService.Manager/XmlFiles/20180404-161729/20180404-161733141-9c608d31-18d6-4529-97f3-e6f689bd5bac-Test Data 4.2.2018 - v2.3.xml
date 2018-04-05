@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<Vendor_AssignmentRecord_v13 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ClientName>
+  </ClientName>
+  <AssignmentTypeName>Involuntary</AssignmentTypeName>
+  <AssignmentIdentity>
+  </AssignmentIdentity>
+  <ClientAccountNumber>15193796</ClientAccountNumber>
+  <LoanNumber>7443275</LoanNumber>
+  <LienHolder>Chrysler Capital - Skip 1st Placement</LienHolder>
+  <Year>2010</Year>
+  <Make>Chevrolet</Make>
+  <Model>Malibu</Model>
+  <Vin>1G1ZB5EB5A4115804</Vin>
+  <ClientContact>Unassigned Needs Review</ClientContact>
+  <CollateralType>Automobile</CollateralType>
+  <ClientCompanyID>2385</ClientCompanyID>
+  <Persons>
+    <Person>
+      <First_Name>Bishawn Crawford</First_Name>
+      <SSN>579249896</SSN>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+    </Person>
+  </Persons>
+  <Addresses>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>3321 WICKHAM AVE</Address_Line_1>
+      <City>BRONX</City>
+      <State>NY</State>
+      <Zip_Code>10469</Zip_Code>
+      <Debtor_Address_Type_Name>1</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>
+      </Debtor_Type_Name>
+      <Address_Line_1>
+      </Address_Line_1>
+      <City>
+      </City>
+      <State>
+      </State>
+      <Zip_Code>
+      </Zip_Code>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>
+      </Debtor_Type_Name>
+      <Address_Line_1>675 B N. MAIN STREET</Address_Line_1>
+      <City>WOODSTOCK</City>
+      <State>VA</State>
+      <Zip_Code>22664</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+  </Addresses>
+  <ContactInformation>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>707-816-8981</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+  </ContactInformation>
+</Vendor_AssignmentRecord_v13>

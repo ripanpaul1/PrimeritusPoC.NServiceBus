@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Vendor_AssignmentRecord_v13 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ClientName>
+  </ClientName>
+  <AssignmentTypeName>Involuntary</AssignmentTypeName>
+  <AssignmentIdentity>
+  </AssignmentIdentity>
+  <ClientAccountNumber>15150554</ClientAccountNumber>
+  <LoanNumber>1970869</LoanNumber>
+  <LienHolder>Santander Consumer USA</LienHolder>
+  <Year>2012</Year>
+  <Make>Chevrolet</Make>
+  <Model>Silverado 1500</Model>
+  <Vin>1GCPKSE7XCF205420</Vin>
+  <ClientContact>Unassigned Needs Review</ClientContact>
+  <CollateralType>Automobile</CollateralType>
+  <ClientCompanyID>1084</ClientCompanyID>
+  <Persons>
+    <Person>
+      <First_Name>Goldie Dickey</First_Name>
+      <SSN>579248193</SSN>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+    </Person>
+  </Persons>
+  <Addresses>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>4331 CALERA</Address_Line_1>
+      <City>SUGAR LAND</City>
+      <State>TX</State>
+      <Zip_Code>77479</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>
+      </Debtor_Type_Name>
+      <Address_Line_1>
+      </Address_Line_1>
+      <City>
+      </City>
+      <State>
+      </State>
+      <Zip_Code>
+      </Zip_Code>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Address>
+  </Addresses>
+  <ContactInformation>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>662-746-1943</Phone_Number>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>310-925-9259</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+  </ContactInformation>
+</Vendor_AssignmentRecord_v13>

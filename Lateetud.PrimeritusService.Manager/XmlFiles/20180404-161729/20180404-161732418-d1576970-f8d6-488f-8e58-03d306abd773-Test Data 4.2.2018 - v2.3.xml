@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Vendor_AssignmentRecord_v13 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ClientName>
+  </ClientName>
+  <AssignmentTypeName>Involuntary</AssignmentTypeName>
+  <AssignmentIdentity>
+  </AssignmentIdentity>
+  <ClientAccountNumber>154117205</ClientAccountNumber>
+  <LoanNumber>1100270407</LoanNumber>
+  <LienHolder>Chrysler Financial</LienHolder>
+  <Year>2012</Year>
+  <Make>Ford</Make>
+  <Model>Escape</Model>
+  <Vin>1FMCU0C71CKC12999</Vin>
+  <ClientContact>Unassigned</ClientContact>
+  <CollateralType>Automobile</CollateralType>
+  <ClientCompanyID>1084</ClientCompanyID>
+  <Persons>
+    <Person>
+      <First_Name>DENZEL LENEAR</First_Name>
+      <SSN>579249119</SSN>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+    </Person>
+    <Person>
+      <First_Name>VELMA ELSTON</First_Name>
+      <SSN>579249239</SSN>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+    </Person>
+  </Persons>
+  <Addresses>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>3750 BONANZA</Address_Line_1>
+      <City>LAS VEGAS</City>
+      <State>NV</State>
+      <Zip_Code>89110</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>1210 E FIFTH ST</Address_Line_1>
+      <City>Oxnard</City>
+      <State>CA</State>
+      <Zip_Code>93030</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Address_Line_1>556 Avenida de la plata</Address_Line_1>
+      <City>newbury park</City>
+      <State>CA</State>
+      <Zip_Code>91320</Zip_Code>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Address_Line_1>650 Lakeview Drive</Address_Line_1>
+      <City>Monroe</City>
+      <State>OH</State>
+      <Zip_Code>45050</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+  </Addresses>
+  <ContactInformation>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>510-962-2032</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Phone_Number>201-342-2682</Phone_Number>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Phone_Number>555898968</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+  </ContactInformation>
+</Vendor_AssignmentRecord_v13>

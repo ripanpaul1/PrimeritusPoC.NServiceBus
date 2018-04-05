@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Vendor_AssignmentRecord_v13 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ClientName>
+  </ClientName>
+  <AssignmentTypeName>Involuntary</AssignmentTypeName>
+  <AssignmentIdentity>
+  </AssignmentIdentity>
+  <ClientAccountNumber>15159897</ClientAccountNumber>
+  <LoanNumber>25805</LoanNumber>
+  <LienHolder>Santander Consumer USA 2nd Placement</LienHolder>
+  <Year>2010</Year>
+  <Make>Chrysler</Make>
+  <Model>Sebring</Model>
+  <Vin>1C3BC5ED0AN148862</Vin>
+  <ClientContact>Unassigned Needs Review</ClientContact>
+  <CollateralType>Automobile</CollateralType>
+  <ClientCompanyID>2385</ClientCompanyID>
+  <Persons>
+    <Person>
+      <First_Name>Joy Williams</First_Name>
+      <SSN>579247903</SSN>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+    </Person>
+  </Persons>
+  <Addresses>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>726 HARRIS CT APT 4</Address_Line_1>
+      <City>HAYWARD</City>
+      <State>CA</State>
+      <Zip_Code>94544</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>
+      </Debtor_Type_Name>
+      <Address_Line_1>
+      </Address_Line_1>
+      <City>
+      </City>
+      <State>
+      </State>
+      <Zip_Code>
+      </Zip_Code>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Address>
+  </Addresses>
+  <ContactInformation>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>815-592-7912</Phone_Number>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>718-933-8573</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+  </ContactInformation>
+</Vendor_AssignmentRecord_v13>

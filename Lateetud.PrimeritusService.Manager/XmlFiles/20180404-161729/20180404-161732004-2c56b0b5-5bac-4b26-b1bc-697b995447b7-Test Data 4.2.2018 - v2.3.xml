@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Vendor_AssignmentRecord_v13 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ClientName>
+  </ClientName>
+  <AssignmentTypeName>Involuntary</AssignmentTypeName>
+  <AssignmentIdentity>
+  </AssignmentIdentity>
+  <ClientAccountNumber>15199826</ClientAccountNumber>
+  <LoanNumber>6118896</LoanNumber>
+  <LienHolder>Chrysler Capital</LienHolder>
+  <Year>2012</Year>
+  <Make>Jeep</Make>
+  <Model>Grand Cherokee</Model>
+  <Vin>1C4RJECT0CC188156</Vin>
+  <ClientContact>Unassigned Needs Review</ClientContact>
+  <CollateralType>Automobile</CollateralType>
+  <ClientCompanyID>2385</ClientCompanyID>
+  <Persons>
+    <Person>
+      <First_Name>Tammy Pigford</First_Name>
+      <SSN>579248722</SSN>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+    </Person>
+  </Persons>
+  <Addresses>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>400 CO RD 305</Address_Line_1>
+      <City>COLUMBIANA</City>
+      <State>AL</State>
+      <Zip_Code>35051</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>
+      </Debtor_Type_Name>
+      <Address_Line_1>
+      </Address_Line_1>
+      <City>
+      </City>
+      <State>
+      </State>
+      <Zip_Code>
+      </Zip_Code>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>
+      </Debtor_Type_Name>
+      <Address_Line_1>42302 8TH STREET EAST</Address_Line_1>
+      <City>LANCASTER</City>
+      <State>CA</State>
+      <Zip_Code>93535</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+  </Addresses>
+  <ContactInformation>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>347-728-7481</Phone_Number>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>916-834-1974</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+  </ContactInformation>
+</Vendor_AssignmentRecord_v13>

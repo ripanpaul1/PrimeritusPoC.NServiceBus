@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Vendor_AssignmentRecord_v13 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ClientName>
+  </ClientName>
+  <AssignmentTypeName>Involuntary</AssignmentTypeName>
+  <AssignmentIdentity>
+  </AssignmentIdentity>
+  <ClientAccountNumber>15159835</ClientAccountNumber>
+  <LoanNumber>1361614</LoanNumber>
+  <LienHolder>Santander Consumer USA 2nd Placement</LienHolder>
+  <Year>2012</Year>
+  <Make>Chevrolet</Make>
+  <Model>Malibu</Model>
+  <Vin>1G1ZA5E0XCF399052</Vin>
+  <ClientContact>Unassigned Needs Review</ClientContact>
+  <CollateralType>Automobile</CollateralType>
+  <ClientCompanyID>2122</ClientCompanyID>
+  <Persons>
+    <Person>
+      <First_Name>Garrett Greymountain</First_Name>
+      <SSN>579249888</SSN>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+    </Person>
+    <Person>
+      <First_Name>JAVIER FLORES</First_Name>
+      <SSN>579250008</SSN>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+    </Person>
+  </Persons>
+  <Addresses>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>4824 KEMPSTON DR</Address_Line_1>
+      <City>ORLANDO</City>
+      <State>FL</State>
+      <Zip_Code>32812</Zip_Code>
+      <Debtor_Address_Type_Name>1</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>76 1st St</Address_Line_1>
+      <City>GRETNA</City>
+      <State>LA</State>
+      <Zip_Code>70053</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Address_Line_1>622 WHITNEY AVE</Address_Line_1>
+      <City>NEW ORLEANS</City>
+      <State>LA</State>
+      <Zip_Code>70114</Zip_Code>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Address_Line_1>601 BREVARD RD</Address_Line_1>
+      <City>ASHEVILLE</City>
+      <State>NC</State>
+      <Zip_Code>28801</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+  </Addresses>
+  <ContactInformation>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>575-233-2467</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Phone_Number>201-342-3451</Phone_Number>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Phone_Number>555899737</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+  </ContactInformation>
+</Vendor_AssignmentRecord_v13>

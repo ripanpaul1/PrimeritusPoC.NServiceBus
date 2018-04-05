@@ -1,5 +1,5 @@
 ﻿@using Lateetud.Utilities.Models;
-@model List<FileModel>
+@model FileModelList
 @{
     Layout = "~/Views/Shared/_LayoutPrimeritus.cshtml";
 }
@@ -39,7 +39,7 @@
                             <div class="row">&nbsp;</div>
                         </div>
                     }
-                    else if (Model.Count <= 0)
+                    else if (Model.FileModels.Count <= 0)
                     {
                         using (Html.BeginForm("XmlService", "ServiceManager", FormMethod.Post, new { enctype = "multipart/form-data" }))
                         {
@@ -65,6 +65,7 @@
                                                 <thead>
                                                     <tr style="background-color:lightseagreen">
                                                         <th>File Name</th>
+                                                        <th>Execution Time (ss.ttt)</th>
                                                         <th>Status</th>
                                                     </tr>
                                                 </thead>
@@ -89,8 +90,11 @@
                     {
                         <div>
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-6">
                                     <a class="btn btn-info" href="@Url.Action("XmlService","ServiceManager")">Back</a>
+                                </div>
+                                <div class="col-md-6" style="text-align:right;color: palevioletred;font-style: italic;">
+                                    Total Execution Time (HH:mm:ss.ttt) : @Model.TotalProcessTime
                                 </div>
                             </div>
                             <div class="row">&nbsp;</div>
@@ -101,21 +105,22 @@
                                             <thead>
                                                 <tr style="background-color:lightseagreen">
                                                     <th>File Name</th>
+                                                    <th>Execution Time (ss.ttt)</th>
                                                     <th>Status</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @if (Model.Count > 0)
+                                                @if (Model.FileModels.Count > 0)
                                                 {
-                                                    for (var ic = 0; ic < Model.Count; ic++)
+                                                    for (var ic = 0; ic < Model.FileModels.Count; ic++)
                                                     {
-                                                        if (Model[ic].Status == Lateetud.Utilities.PStatus.Success)
+                                                        if (Model.FileModels[ic].Status == Lateetud.Utilities.PStatus.Success)
                                                         {
-                                                            <tr class="green"><td>@Model[ic].OriginalFileName</td><td>@Model[ic].StatusText</td></tr>
+                                                            <tr class="green"><td>@Model.FileModels[ic].OriginalFileName</td><td>@Model.FileModels[ic].ExecutionTime</td><td>@Model.FileModels[ic].StatusText</td></tr>
                                                         }
-                                                        else if (Model[ic].Status == Lateetud.Utilities.PStatus.Failed || Model[ic].Status == Lateetud.Utilities.PStatus.Error)
+                                                        else if (Model.FileModels[ic].Status == Lateetud.Utilities.PStatus.Failed || Model.FileModels[ic].Status == Lateetud.Utilities.PStatus.Error)
                                                         {
-                                                            <tr class="red"><td>@Model[ic].OriginalFileName</td><td>@Model[ic].StatusText</td></tr>
+                                                            <tr class="red"><td>@Model.FileModels[ic].OriginalFileName</td><td>@Model.FileModels[ic].ExecutionTime</td><td>@Model.FileModels[ic].StatusText</td></tr>
                                                         }
                                                     }
                                                 }
@@ -149,7 +154,7 @@
             var names = $.map($('#files').prop("files"), function (val) { return val.name; });
             if (names.length > 0) {
                 for (var ic = 0; ic < names.length; ic++) {
-                    $('#tbodyXmlFilesItem').append("<tr><td>" + names[ic] + "</td><td>Pending</td></tr>");
+                    $('#tbodyXmlFilesItem').append("<tr><td>" + names[ic] + "</td><td></td><td>Pending</td></tr>");
                 }
             }
         });

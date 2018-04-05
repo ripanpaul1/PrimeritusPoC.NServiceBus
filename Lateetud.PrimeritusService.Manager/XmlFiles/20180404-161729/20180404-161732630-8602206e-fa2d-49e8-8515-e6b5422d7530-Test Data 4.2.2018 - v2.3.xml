@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Vendor_AssignmentRecord_v13 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ClientName>
+  </ClientName>
+  <AssignmentTypeName>Involuntary</AssignmentTypeName>
+  <AssignmentIdentity>
+  </AssignmentIdentity>
+  <ClientAccountNumber>a28e4314-32da-43ca-ad41-d790c6ab31dd</ClientAccountNumber>
+  <LoanNumber>100413893</LoanNumber>
+  <LienHolder>Crescent Bank and Trust - Active SKIP</LienHolder>
+  <Year>2015</Year>
+  <Make>Chrysler</Make>
+  <Model>200</Model>
+  <Vin>1C3CCCBG7FN505968</Vin>
+  <ClientContact>Jessica Thompson</ClientContact>
+  <CollateralType>Automobile</CollateralType>
+  <ClientCompanyID>2122</ClientCompanyID>
+  <Persons>
+    <Person>
+      <First_Name>RICHARD MILLER</First_Name>
+      <SSN>579249337</SSN>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+    </Person>
+    <Person>
+      <First_Name>Terrance Auguster</First_Name>
+      <SSN>579249457</SSN>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+    </Person>
+  </Persons>
+  <Addresses>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>PO BOX 48</Address_Line_1>
+      <City>CORBIN</City>
+      <State>KY</State>
+      <Zip_Code>40702</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>3535 Highway 111</Address_Line_1>
+      <City>Pontoon Beach</City>
+      <State>IL</State>
+      <Zip_Code>62040</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Address_Line_1>604 GANIM DR #</Address_Line_1>
+      <City>Belleville</City>
+      <State>IL</State>
+      <Zip_Code>62220</Zip_Code>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Address_Line_1>817 pulaski st</Address_Line_1>
+      <City>riverhead</City>
+      <State>NY</State>
+      <Zip_Code>11901</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+  </Addresses>
+  <ContactInformation>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>918-869-2034</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Phone_Number>201-342-2900</Phone_Number>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Phone_Number>555899186</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+  </ContactInformation>
+</Vendor_AssignmentRecord_v13>

@@ -577,38 +577,61 @@ namespace Lateetud.PrimeritusService.Manager.LibClasses
             return vMExcel;
         }
 
-        public List<FileModel> ReadXml(HttpPostedFileBase[] files, string DestinationPath)
+        public FileModelList ReadXml(HttpPostedFileBase[] files, string DestinationPath)
         {
-            List<FileModel> TheFiles = new GeneralService().UploadFiles(files, DestinationPath);
-            if (TheFiles == null) return null;
-            if (TheFiles.Count > 0)
+            FileModelList fileModelList = new FileModelList();
+            fileModelList.FileModels = new GeneralService().UploadFiles(files, DestinationPath);
+            if (fileModelList == null) return null;
+            if (fileModelList.FileModels == null) return null;
+            if (fileModelList.FileModels.Count > 0)
             {
                 try
                 {
                     Primeritus.PrimeritusServiceSoapClient client = new Primeritus.PrimeritusServiceSoapClient();
-                    for (int TheFile = 0; TheFile < TheFiles.Count; TheFile++)
+                    for (int TheFile = 0; TheFile < fileModelList.FileModels.Count; TheFile++)
                     {
-                        XmlDocument xmldoc = new XmlDocument();
-                        xmldoc.Load(TheFiles[TheFile].FilePath);
-                        string response = client.InvokeXmlService(xmldoc.InnerXml);
-                        if (response == "Published")
+                        DateTime dtStart = DateTime.Now;
+                        if (fileModelList.FileModels[TheFile].Status == PStatus.Error)
                         {
-                            TheFiles[TheFile].Status = PStatus.Success;
-                            TheFiles[TheFile].StatusText = response;
+                            DateTime dtEnd = DateTime.Now;
+                            fileModelList.FileModels[TheFile].ExecutionTimeSpan = dtEnd.Subtract(dtStart);
+                            fileModelList.FileModels[TheFile].ExecutionTime = fileModelList.FileModels[TheFile].ExecutionTimeSpan.Seconds.ToString("00") + "." + fileModelList.FileModels[TheFile].ExecutionTimeSpan.Milliseconds.ToString("000");
+                            fileModelList.FileModels[TheFile].TotalExecutionTimeSpan = fileModelList.FileModels[TheFile].UploadTimeSpan + fileModelList.FileModels[TheFile].ExecutionTimeSpan;
+                            fileModelList.FileModels[TheFile].TotalExecutionTime = fileModelList.FileModels[TheFile].TotalExecutionTimeSpan.Seconds.ToString("00") + "." + fileModelList.FileModels[TheFile].TotalExecutionTimeSpan.Milliseconds.ToString("000");
+                            fileModelList.TotalProcessTimeSpan += fileModelList.FileModels[TheFile].TotalExecutionTimeSpan;
                         }
                         else
                         {
-                            TheFiles[TheFile].Status = PStatus.Failed;
-                            TheFiles[TheFile].StatusText = "Failed";
+                            XmlDocument xmldoc = new XmlDocument();
+                            xmldoc.Load(fileModelList.FileModels[TheFile].FilePath);
+                            string response = client.InvokeXmlService(xmldoc.InnerXml);
+                            if (response == "Published")
+                            {
+                                fileModelList.FileModels[TheFile].Status = PStatus.Success;
+                                fileModelList.FileModels[TheFile].StatusText = response;
+                            }
+                            else
+                            {
+                                fileModelList.FileModels[TheFile].Status = PStatus.Failed;
+                                fileModelList.FileModels[TheFile].StatusText = "Failed";
+                            }
+
+                            DateTime dtEnd = DateTime.Now;
+                            fileModelList.FileModels[TheFile].ExecutionTimeSpan = dtEnd.Subtract(dtStart);
+                            fileModelList.FileModels[TheFile].ExecutionTime = fileModelList.FileModels[TheFile].ExecutionTimeSpan.Seconds.ToString("00") + "." + fileModelList.FileModels[TheFile].ExecutionTimeSpan.Milliseconds.ToString("000");
+                            fileModelList.FileModels[TheFile].TotalExecutionTimeSpan = fileModelList.FileModels[TheFile].UploadTimeSpan + fileModelList.FileModels[TheFile].ExecutionTimeSpan;
+                            fileModelList.FileModels[TheFile].TotalExecutionTime = fileModelList.FileModels[TheFile].TotalExecutionTimeSpan.Seconds.ToString("00") + "." + fileModelList.FileModels[TheFile].TotalExecutionTimeSpan.Milliseconds.ToString("000");
+                            fileModelList.TotalProcessTimeSpan += fileModelList.FileModels[TheFile].TotalExecutionTimeSpan;
                         }
                     }
+                    fileModelList.TotalProcessTime = fileModelList.TotalProcessTimeSpan.Hours.ToString("00") + ":" + fileModelList.TotalProcessTimeSpan.Minutes.ToString("00") + ":" + fileModelList.TotalProcessTimeSpan.Seconds.ToString("00") + "." + fileModelList.TotalProcessTimeSpan.Milliseconds.ToString("000");
                 }
                 catch (Exception ex)
                 {
                     return null;
                 }
             }
-            return TheFiles;
+            return fileModelList;
         }
     }
 }

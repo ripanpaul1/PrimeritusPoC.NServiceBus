@@ -471,10 +471,10 @@ namespace Lateetud.NServiceBus.Subscriber.LibClasses
         {
             try
             {
-				com.renovo.test.aptest.RequestAssignment assignment = new com.renovo.test.aptest.RequestAssignment();
-				System.Net.ServicePointManager.ServerCertificateValidationCallback = ((sender, cert, chain, errors) => cert.Subject.Contains("test.renovo.com"));
-				assignment.Credentials = new NetworkCredential("rpaul", "Recovery@1991");
-				if (assignment._RequestAssignment(aurastring) <= 0) return false;
+				//com.renovo.test.aptest.RequestAssignment assignment = new com.renovo.test.aptest.RequestAssignment();
+				//System.Net.ServicePointManager.ServerCertificateValidationCallback = ((sender, cert, chain, errors) => cert.Subject.Contains("test.renovo.com"));
+				//assignment.Credentials = new NetworkCredential("rpaul", "Recovery@1991");
+				//if (assignment._RequestAssignment(aurastring) <= 0) return false;
 				return true;
             }
             catch
@@ -565,8 +565,6 @@ namespace Lateetud.NServiceBus.Subscriber.LibClasses
                     #endregion
 
                     TheFile.FileContent = data.ToString();
-
-                    
                 }
             }
             catch (Exception ex)

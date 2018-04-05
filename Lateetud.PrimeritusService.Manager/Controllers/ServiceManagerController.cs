@@ -29,7 +29,9 @@ namespace Lateetud.PrimeritusService.Manager.Controllers
         public ActionResult XmlService()
         {
             ViewBag.Title = "Simulator - Future State Prototype using NServiceBus";
-            return View(new List<FileModel>());
+            FileModelList fileModelList = new FileModelList();
+            fileModelList.FileModels = new List<FileModel>();
+            return View(fileModelList);
         }
 
         [HttpPost]
@@ -37,9 +39,9 @@ namespace Lateetud.PrimeritusService.Manager.Controllers
         public ActionResult XmlService(HttpPostedFileBase[] files)
         {
             ViewBag.Title = "Simulator - Future State Prototype using NServiceBus";
-            List<FileModel> fileModel = null;
-            if (files[0] != null) fileModel = new LateetudService().ReadXml(files, Server.MapPath("~/TempFiles"));
-            return View("XmlService", fileModel);
+            FileModelList fileModelList = null;
+            if (files[0] != null) fileModelList = new LateetudService().ReadXml(files, Server.MapPath("~/TempFiles"));
+            return View("XmlService", fileModelList);
         }
         #endregion
     }

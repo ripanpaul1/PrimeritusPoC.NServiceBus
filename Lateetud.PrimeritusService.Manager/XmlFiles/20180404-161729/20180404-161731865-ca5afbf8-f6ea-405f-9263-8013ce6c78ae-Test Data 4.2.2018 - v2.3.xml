@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<Vendor_AssignmentRecord_v13 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ClientName>
+  </ClientName>
+  <AssignmentTypeName>Involuntary</AssignmentTypeName>
+  <AssignmentIdentity>
+  </AssignmentIdentity>
+  <ClientAccountNumber>
+  </ClientAccountNumber>
+  <LoanNumber>141455692850</LoanNumber>
+  <LienHolder>Capital Bank</LienHolder>
+  <Year>2015</Year>
+  <Make>Jeep</Make>
+  <Model>Cherokee</Model>
+  <Vin>1C4PJMCBXFW578306</Vin>
+  <ClientContact>Jan Culver-Gomez</ClientContact>
+  <CollateralType>Automobile</CollateralType>
+  <ClientCompanyID>4482</ClientCompanyID>
+  <Persons>
+    <Person>
+      <First_Name>Mark Greene</First_Name>
+      <SSN>579248558</SSN>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+    </Person>
+    <Person>
+      <First_Name>Brody Hankinson</First_Name>
+      <SSN>579248678</SSN>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+    </Person>
+  </Persons>
+  <Addresses>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>11497 MILLPOND RD</Address_Line_1>
+      <City>FONTANA</City>
+      <State>CA</State>
+      <Zip_Code>92337</Zip_Code>
+      <Debtor_Address_Type_Name>1</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Address_Line_1>8205 N CONGRESS</Address_Line_1>
+      <City>PORTLAND</City>
+      <State>OR</State>
+      <Zip_Code>97217</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Address_Line_1>5160 CHENOWETH RD</Address_Line_1>
+      <City>THE DALLES</City>
+      <State>OR</State>
+      <Zip_Code>97058</Zip_Code>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Address>
+    <Address>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Address_Line_1>4 Beachview St</Address_Line_1>
+      <City>Copiague</City>
+      <State>NY</State>
+      <Zip_Code>11726</Zip_Code>
+      <Debtor_Address_Type_Name>77</Debtor_Address_Type_Name>
+    </Address>
+  </Addresses>
+  <ContactInformation>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>423-223-0479</Phone_Number>
+      <Debtor_Address_Type_Name>1</Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>14</Debtor_Type_Name>
+      <Phone_Number>713-445-6258</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Phone_Number>201-342-2121</Phone_Number>
+      <Debtor_Address_Type_Name>3</Debtor_Address_Type_Name>
+    </Contact>
+    <Contact>
+      <Debtor_Type_Name>22</Debtor_Type_Name>
+      <Phone_Number>555898407</Phone_Number>
+      <Debtor_Address_Type_Name>
+      </Debtor_Address_Type_Name>
+    </Contact>
+  </ContactInformation>
+</Vendor_AssignmentRecord_v13>
