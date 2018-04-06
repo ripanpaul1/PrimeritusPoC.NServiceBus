@@ -48,3 +48,4 @@ E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.PrimeritusService.Manager\bin\M
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.PrimeritusService.Manager\obj\Debug\Lateetud.PrimeritusService.Manager.csproj.CoreCompileInputs.cache
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.PrimeritusService.Manager\obj\Debug\Lateetud.PrimeritusService.Manager.dll
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.PrimeritusService.Manager\obj\Debug\Lateetud.PrimeritusService.Manager.pdb
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.PrimeritusService.Manager\obj\Debug\Lateetud.PrimeritusService.Manager.csprojResolveAssemblyReference.cache

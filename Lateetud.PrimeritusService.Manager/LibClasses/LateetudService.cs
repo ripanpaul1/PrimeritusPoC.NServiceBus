@@ -579,6 +579,8 @@ namespace Lateetud.PrimeritusService.Manager.LibClasses
 
         public FileModelList ReadXml(HttpPostedFileBase[] files, string DestinationPath)
         {
+            StaticUtilities.ProcessTimeFormat = PTime.Milliseconds;
+
             FileModelList fileModelList = new FileModelList();
             fileModelList.FileModels = new GeneralService().UploadFiles(files, DestinationPath);
             if (fileModelList == null) return null;
@@ -595,10 +597,18 @@ namespace Lateetud.PrimeritusService.Manager.LibClasses
                         {
                             DateTime dtEnd = DateTime.Now;
                             fileModelList.FileModels[TheFile].ExecutionTimeSpan = dtEnd.Subtract(dtStart);
-                            fileModelList.FileModels[TheFile].ExecutionTime = fileModelList.FileModels[TheFile].ExecutionTimeSpan.Seconds.ToString("00") + "." + fileModelList.FileModels[TheFile].ExecutionTimeSpan.Milliseconds.ToString("000");
                             fileModelList.FileModels[TheFile].TotalExecutionTimeSpan = fileModelList.FileModels[TheFile].UploadTimeSpan + fileModelList.FileModels[TheFile].ExecutionTimeSpan;
-                            fileModelList.FileModels[TheFile].TotalExecutionTime = fileModelList.FileModels[TheFile].TotalExecutionTimeSpan.Seconds.ToString("00") + "." + fileModelList.FileModels[TheFile].TotalExecutionTimeSpan.Milliseconds.ToString("000");
                             fileModelList.TotalProcessTimeSpan += fileModelList.FileModels[TheFile].TotalExecutionTimeSpan;
+                            if (StaticUtilities.ProcessTimeFormat == PTime.Ticks)
+                            {
+                                fileModelList.FileModels[TheFile].ExecutionTime = fileModelList.FileModels[TheFile].ExecutionTimeSpan.Seconds.ToString("00") + "." + fileModelList.FileModels[TheFile].ExecutionTimeSpan.Ticks.ToString();
+                                fileModelList.FileModels[TheFile].TotalExecutionTime = fileModelList.FileModels[TheFile].TotalExecutionTimeSpan.Seconds.ToString("00") + "." + fileModelList.FileModels[TheFile].TotalExecutionTimeSpan.Ticks.ToString();
+                            }
+                            else if (StaticUtilities.ProcessTimeFormat == PTime.Milliseconds)
+                            {
+                                fileModelList.FileModels[TheFile].ExecutionTime = fileModelList.FileModels[TheFile].ExecutionTimeSpan.Seconds.ToString("00") + "." + fileModelList.FileModels[TheFile].ExecutionTimeSpan.Milliseconds.ToString("000");
+                                fileModelList.FileModels[TheFile].TotalExecutionTime = fileModelList.FileModels[TheFile].TotalExecutionTimeSpan.Seconds.ToString("00") + "." + fileModelList.FileModels[TheFile].TotalExecutionTimeSpan.Milliseconds.ToString("000");
+                            }
                         }
                         else
                         {
@@ -618,13 +628,25 @@ namespace Lateetud.PrimeritusService.Manager.LibClasses
 
                             DateTime dtEnd = DateTime.Now;
                             fileModelList.FileModels[TheFile].ExecutionTimeSpan = dtEnd.Subtract(dtStart);
-                            fileModelList.FileModels[TheFile].ExecutionTime = fileModelList.FileModels[TheFile].ExecutionTimeSpan.Seconds.ToString("00") + "." + fileModelList.FileModels[TheFile].ExecutionTimeSpan.Milliseconds.ToString("000");
                             fileModelList.FileModels[TheFile].TotalExecutionTimeSpan = fileModelList.FileModels[TheFile].UploadTimeSpan + fileModelList.FileModels[TheFile].ExecutionTimeSpan;
-                            fileModelList.FileModels[TheFile].TotalExecutionTime = fileModelList.FileModels[TheFile].TotalExecutionTimeSpan.Seconds.ToString("00") + "." + fileModelList.FileModels[TheFile].TotalExecutionTimeSpan.Milliseconds.ToString("000");
                             fileModelList.TotalProcessTimeSpan += fileModelList.FileModels[TheFile].TotalExecutionTimeSpan;
+
+                            if (StaticUtilities.ProcessTimeFormat == PTime.Ticks)
+                            {
+                                fileModelList.FileModels[TheFile].ExecutionTime = fileModelList.FileModels[TheFile].ExecutionTimeSpan.Seconds.ToString("00") + "." + fileModelList.FileModels[TheFile].ExecutionTimeSpan.Ticks.ToString();
+                                fileModelList.FileModels[TheFile].TotalExecutionTime = fileModelList.FileModels[TheFile].TotalExecutionTimeSpan.Seconds.ToString("00") + "." + fileModelList.FileModels[TheFile].TotalExecutionTimeSpan.Ticks.ToString();
+                            }
+                            else if (StaticUtilities.ProcessTimeFormat == PTime.Milliseconds)
+                            {
+                                fileModelList.FileModels[TheFile].ExecutionTime = fileModelList.FileModels[TheFile].ExecutionTimeSpan.Seconds.ToString("00") + "." + fileModelList.FileModels[TheFile].ExecutionTimeSpan.Milliseconds.ToString("000");
+                                fileModelList.FileModels[TheFile].TotalExecutionTime = fileModelList.FileModels[TheFile].TotalExecutionTimeSpan.Seconds.ToString("00") + "." + fileModelList.FileModels[TheFile].TotalExecutionTimeSpan.Milliseconds.ToString("000");
+                            }
                         }
                     }
-                    fileModelList.TotalProcessTime = fileModelList.TotalProcessTimeSpan.Hours.ToString("00") + ":" + fileModelList.TotalProcessTimeSpan.Minutes.ToString("00") + ":" + fileModelList.TotalProcessTimeSpan.Seconds.ToString("00") + "." + fileModelList.TotalProcessTimeSpan.Milliseconds.ToString("000");
+                    if (StaticUtilities.ProcessTimeFormat == PTime.Ticks)
+                        fileModelList.TotalProcessTime = fileModelList.TotalProcessTimeSpan.Hours.ToString("00") + ":" + fileModelList.TotalProcessTimeSpan.Minutes.ToString("00") + ":" + fileModelList.TotalProcessTimeSpan.Seconds.ToString("00") + "." + fileModelList.TotalProcessTimeSpan.Ticks.ToString();
+                    else if (StaticUtilities.ProcessTimeFormat == PTime.Milliseconds)
+                        fileModelList.TotalProcessTime = fileModelList.TotalProcessTimeSpan.Hours.ToString("00") + ":" + fileModelList.TotalProcessTimeSpan.Minutes.ToString("00") + ":" + fileModelList.TotalProcessTimeSpan.Seconds.ToString("00") + "." + fileModelList.TotalProcessTimeSpan.Milliseconds.ToString("000");
                 }
                 catch (Exception ex)
                 {
