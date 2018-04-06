@@ -653,6 +653,7 @@ namespace Lateetud.PrimeritusService.Manager.LibClasses
                     return null;
                 }
             }
+            new GeneralService().DeleteDirectory(fileModelList.FileModels[0].DirectoryPath);
             return fileModelList;
         }
     }
