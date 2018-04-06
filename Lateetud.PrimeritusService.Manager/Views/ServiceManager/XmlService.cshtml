@@ -116,11 +116,11 @@
                                                     {
                                                         if (Model.FileModels[ic].Status == Lateetud.Utilities.PStatus.Success)
                                                         {
-                                                            <tr class="green"><td>@Model.FileModels[ic].OriginalFileName</td><td>@Model.FileModels[ic].ExecutionTime</td><td>@Model.FileModels[ic].StatusText</td></tr>
+                                                            <tr class="green"><td>@Model.FileModels[ic].OriginalFileName</td><td>@Model.FileModels[ic].TotalExecutionTime</td><td>@Model.FileModels[ic].StatusText</td></tr>
                                                         }
                                                         else if (Model.FileModels[ic].Status == Lateetud.Utilities.PStatus.Failed || Model.FileModels[ic].Status == Lateetud.Utilities.PStatus.Error)
                                                         {
-                                                            <tr class="red"><td>@Model.FileModels[ic].OriginalFileName</td><td>@Model.FileModels[ic].ExecutionTime</td><td>@Model.FileModels[ic].StatusText</td></tr>
+                                                            <tr class="red"><td>@Model.FileModels[ic].OriginalFileName</td><td>@Model.FileModels[ic].TotalExecutionTime</td><td>@Model.FileModels[ic].StatusText</td></tr>
                                                         }
                                                     }
                                                 }
