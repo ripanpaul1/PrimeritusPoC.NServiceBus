@@ -117,11 +117,15 @@ namespace Lateetud.PrimeritusService.Manager.Primeritus {
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
         public string XmlString;
         
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string RequestType;
+        
         public InvokeXmlServiceRequestBody() {
         }
         
-        public InvokeXmlServiceRequestBody(string XmlString) {
+        public InvokeXmlServiceRequestBody(string XmlString, string RequestType) {
             this.XmlString = XmlString;
+            this.RequestType = RequestType;
         }
     }
     
@@ -214,10 +218,11 @@ namespace Lateetud.PrimeritusService.Manager.Primeritus {
             return base.Channel.InvokeXmlService(request);
         }
         
-        public string InvokeXmlService(string XmlString) {
+        public string InvokeXmlService(string XmlString, string RequestType) {
             Lateetud.PrimeritusService.Manager.Primeritus.InvokeXmlServiceRequest inValue = new Lateetud.PrimeritusService.Manager.Primeritus.InvokeXmlServiceRequest();
             inValue.Body = new Lateetud.PrimeritusService.Manager.Primeritus.InvokeXmlServiceRequestBody();
             inValue.Body.XmlString = XmlString;
+            inValue.Body.RequestType = RequestType;
             Lateetud.PrimeritusService.Manager.Primeritus.InvokeXmlServiceResponse retVal = ((Lateetud.PrimeritusService.Manager.Primeritus.PrimeritusServiceSoap)(this)).InvokeXmlService(inValue);
             return retVal.Body.InvokeXmlServiceResult;
         }
@@ -227,10 +232,11 @@ namespace Lateetud.PrimeritusService.Manager.Primeritus {
             return base.Channel.InvokeXmlServiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Lateetud.PrimeritusService.Manager.Primeritus.InvokeXmlServiceResponse> InvokeXmlServiceAsync(string XmlString) {
+        public System.Threading.Tasks.Task<Lateetud.PrimeritusService.Manager.Primeritus.InvokeXmlServiceResponse> InvokeXmlServiceAsync(string XmlString, string RequestType) {
             Lateetud.PrimeritusService.Manager.Primeritus.InvokeXmlServiceRequest inValue = new Lateetud.PrimeritusService.Manager.Primeritus.InvokeXmlServiceRequest();
             inValue.Body = new Lateetud.PrimeritusService.Manager.Primeritus.InvokeXmlServiceRequestBody();
             inValue.Body.XmlString = XmlString;
+            inValue.Body.RequestType = RequestType;
             return ((Lateetud.PrimeritusService.Manager.Primeritus.PrimeritusServiceSoap)(this)).InvokeXmlServiceAsync(inValue);
         }
     }

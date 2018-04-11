@@ -467,15 +467,22 @@ namespace Lateetud.NServiceBus.Subscriber.LibClasses
             }
         }
 
-        public bool IsSendAura(string aurastring)
+        public bool IsSendAura(string aurastring, string RequestType)
         {
             try
             {
-				//com.renovo.test.aptest.RequestAssignment assignment = new com.renovo.test.aptest.RequestAssignment();
-				//System.Net.ServicePointManager.ServerCertificateValidationCallback = ((sender, cert, chain, errors) => cert.Subject.Contains("test.renovo.com"));
-				//assignment.Credentials = new NetworkCredential("rpaul", "Recovery@1991");
-				//if (assignment._RequestAssignment(aurastring) <= 0) return false;
-				return true;
+                if (RequestType == "1")
+                {
+                    //com.renovo.test.aptest.RequestAssignment assignment = new com.renovo.test.aptest.RequestAssignment();
+                    //System.Net.ServicePointManager.ServerCertificateValidationCallback = ((sender, cert, chain, errors) => cert.Subject.Contains("test.renovo.com"));
+                    //assignment.Credentials = new NetworkCredential("rpaul", "Recovery@1991");
+                    //if (assignment._RequestAssignment(aurastring) <= 0) return false;
+                }
+                else if (RequestType == "2")
+                {
+
+                }
+                return true;
             }
             catch
             {
@@ -483,86 +490,96 @@ namespace Lateetud.NServiceBus.Subscriber.LibClasses
             }
         }
 
-        public FileModel XmlToAuraString(string XmlString)
+        public FileModel XmlToAuraString(string XmlString, string RequestType)
         {
             if (XmlString == null) return null;
             FileModel TheFile = new FileModel();
             try
             {
-                var vendor_AssignmentRecord_v13 = (Vendor_AssignmentRecord_v13)new XmlSerializer(typeof(Vendor_AssignmentRecord_v13)).Deserialize(new MemoryStream(Encoding.UTF8.GetBytes(XmlString)));
-                if (vendor_AssignmentRecord_v13 == null)
+                if (RequestType == "1")
                 {
-                    TheFile.FileContent = "";
-                    TheFile.Status = PStatus.Failed;
-                    TheFile.StatusText = "Failed";
+                    var vendor_AssignmentRecord_v13 = (Vendor_AssignmentRecord_v13)new XmlSerializer(typeof(Vendor_AssignmentRecord_v13)).Deserialize(new MemoryStream(Encoding.UTF8.GetBytes(XmlString)));
+                    if (vendor_AssignmentRecord_v13 == null)
+                    {
+                        TheFile.FileContent = "";
+                        TheFile.Status = PStatus.Failed;
+                        TheFile.StatusText = "Failed";
+                    }
+                    else
+                    {
+                        StringBuilder data = new StringBuilder();
+
+                        #region assignment data
+                        data.Append("[[[3_AssignmentIdentity:::" + vendor_AssignmentRecord_v13.AssignmentIdentity + "]]]");
+                        data.Append("[[[3_AssignmentTypeName:::" + vendor_AssignmentRecord_v13.AssignmentTypeName + "]]]");
+                        data.Append("[[[3_ClientReferenceNumber:::" + vendor_AssignmentRecord_v13.ClientAccountNumber + "]]]");
+                        data.Append("[[[3_ClientCompanyID:::" + vendor_AssignmentRecord_v13.ClientCompanyID + "]]]");
+                        data.Append("[[[3_ClientContact:::" + vendor_AssignmentRecord_v13.ClientContact + "]]]");
+                        data.Append("[[[3_ClientName:::" + vendor_AssignmentRecord_v13.ClientName + "]]]");
+                        data.Append("[[[3_CollateralType:::" + vendor_AssignmentRecord_v13.CollateralType + "]]]");
+                        data.Append("[[[3_LoanNumber:::" + vendor_AssignmentRecord_v13.LoanNumber + "]]]");
+                        data.Append("[[[3_LienHolder:::" + vendor_AssignmentRecord_v13.LienHolder + "]]]");
+                        data.Append("[[[3_Make:::" + vendor_AssignmentRecord_v13.Make + "]]]");
+                        data.Append("[[[3_Model:::" + vendor_AssignmentRecord_v13.Model + "]]]");
+                        data.Append("[[[3_Vin:::" + vendor_AssignmentRecord_v13.Vin + "]]]");
+                        data.Append("[[[3_Year:::" + vendor_AssignmentRecord_v13.Year + "]]]");
+                        #endregion
+
+                        #region person
+                        if (vendor_AssignmentRecord_v13.Persons != null && vendor_AssignmentRecord_v13.Persons.Length > 0)
+                        {
+                            data.Append("[[[6_Person:::|||");
+                            for (int prow = 0; prow < vendor_AssignmentRecord_v13.Persons.Length; prow++)
+                            {
+                                if (prow > 0) data.Append("|||___|||");
+                                data.Append("3_First Name===" + vendor_AssignmentRecord_v13.Persons[prow].First_Name + "|||");
+                                data.Append("3_SSN===" + vendor_AssignmentRecord_v13.Persons[prow].SSN + "|||");
+                                data.Append("3_PersonTypeName===" + vendor_AssignmentRecord_v13.Persons[prow].Debtor_Type_Name);
+                            }
+                            data.Append("]]]");
+                        }
+                        #endregion
+
+                        #region Address
+                        if (vendor_AssignmentRecord_v13.Addresses != null && vendor_AssignmentRecord_v13.Addresses.Length > 0)
+                        {
+                            data.Append("[[[6_Address:::|||");
+                            for (int arow = 0; arow < vendor_AssignmentRecord_v13.Addresses.Length; arow++)
+                            {
+                                if (arow > 0) data.Append("|||___|||");
+                                data.Append("3_PersonTypeID===" + vendor_AssignmentRecord_v13.Addresses[arow].Debtor_Type_Name + "|||");
+                                data.Append("3_AddressLine1===" + vendor_AssignmentRecord_v13.Addresses[arow].Address_Line_1 + "|||");
+                                data.Append("3_City===" + vendor_AssignmentRecord_v13.Addresses[arow].City + "|||");
+                                data.Append("3_State===" + vendor_AssignmentRecord_v13.Addresses[arow].State + "|||");
+                                data.Append("3_ZipCode===" + vendor_AssignmentRecord_v13.Addresses[arow].Zip_Code + "|||");
+                                data.Append("3_DebtorAddressTypeID===" + vendor_AssignmentRecord_v13.Addresses[arow].Debtor_Address_Type_Name);
+                            }
+                            data.Append("]]]");
+                        }
+                        #endregion
+
+                        #region ContactInformation
+                        if (vendor_AssignmentRecord_v13.ContactInformation != null && vendor_AssignmentRecord_v13.ContactInformation.Length > 0)
+                        {
+                            data.Append("[[[6_ContactInformation:::|||");
+                            for (int crow = 0; crow < vendor_AssignmentRecord_v13.ContactInformation.Length; crow++)
+                            {
+                                if (crow > 0) data.Append("|||___|||");
+                                data.Append("3_PersonTypeCode===" + vendor_AssignmentRecord_v13.ContactInformation[crow].Debtor_Type_Name + "|||");
+                                data.Append("3_Phone_Number===" + vendor_AssignmentRecord_v13.ContactInformation[crow].Phone_Number + "|||");
+                                data.Append("3_AddressTypeCode===" + vendor_AssignmentRecord_v13.ContactInformation[crow].Debtor_Address_Type_Name);
+                            }
+                            data.Append("]]]");
+                        }
+                        #endregion
+
+                        TheFile.FileContent = data.ToString();
+                    }
                 }
-                else
+                else if (RequestType == "2")
                 {
                     StringBuilder data = new StringBuilder();
 
-                    #region assignment data
-                    data.Append("[[[3_AssignmentIdentity:::" + vendor_AssignmentRecord_v13.AssignmentIdentity + "]]]");
-                    data.Append("[[[3_AssignmentTypeName:::" + vendor_AssignmentRecord_v13.AssignmentTypeName + "]]]");
-                    data.Append("[[[3_ClientReferenceNumber:::" + vendor_AssignmentRecord_v13.ClientAccountNumber + "]]]");
-                    data.Append("[[[3_ClientCompanyID:::" + vendor_AssignmentRecord_v13.ClientCompanyID + "]]]");
-                    data.Append("[[[3_ClientContact:::" + vendor_AssignmentRecord_v13.ClientContact + "]]]");
-                    data.Append("[[[3_ClientName:::" + vendor_AssignmentRecord_v13.ClientName + "]]]");
-                    data.Append("[[[3_CollateralType:::" + vendor_AssignmentRecord_v13.CollateralType + "]]]");
-                    data.Append("[[[3_LoanNumber:::" + vendor_AssignmentRecord_v13.LoanNumber + "]]]");
-                    data.Append("[[[3_LienHolder:::" + vendor_AssignmentRecord_v13.LienHolder + "]]]");
-                    data.Append("[[[3_Make:::" + vendor_AssignmentRecord_v13.Make + "]]]");
-                    data.Append("[[[3_Model:::" + vendor_AssignmentRecord_v13.Model + "]]]");
-                    data.Append("[[[3_Vin:::" + vendor_AssignmentRecord_v13.Vin + "]]]");
-                    data.Append("[[[3_Year:::" + vendor_AssignmentRecord_v13.Year + "]]]");
-                    #endregion
-
-                    #region person
-                    if (vendor_AssignmentRecord_v13.Persons != null && vendor_AssignmentRecord_v13.Persons.Length > 0)
-                    {
-                        data.Append("[[[6_Person:::|||");
-                        for (int prow = 0; prow < vendor_AssignmentRecord_v13.Persons.Length; prow++)
-                        {
-                            if (prow > 0) data.Append("|||___|||");
-                            data.Append("3_First Name===" + vendor_AssignmentRecord_v13.Persons[prow].First_Name + "|||");
-                            data.Append("3_SSN===" + vendor_AssignmentRecord_v13.Persons[prow].SSN + "|||");
-                            data.Append("3_PersonTypeName===" + vendor_AssignmentRecord_v13.Persons[prow].Debtor_Type_Name);
-                        }
-                        data.Append("]]]");
-                    }
-                    #endregion
-
-                    #region Address
-                    if (vendor_AssignmentRecord_v13.Addresses != null && vendor_AssignmentRecord_v13.Addresses.Length > 0)
-                    {
-                        data.Append("[[[6_Address:::|||");
-                        for (int arow = 0; arow < vendor_AssignmentRecord_v13.Addresses.Length; arow++)
-                        {
-                            if (arow > 0) data.Append("|||___|||");
-                            data.Append("3_PersonTypeID===" + vendor_AssignmentRecord_v13.Addresses[arow].Debtor_Type_Name + "|||");
-                            data.Append("3_AddressLine1===" + vendor_AssignmentRecord_v13.Addresses[arow].Address_Line_1 + "|||");
-                            data.Append("3_City===" + vendor_AssignmentRecord_v13.Addresses[arow].City + "|||");
-                            data.Append("3_State===" + vendor_AssignmentRecord_v13.Addresses[arow].State + "|||");
-                            data.Append("3_ZipCode===" + vendor_AssignmentRecord_v13.Addresses[arow].Zip_Code + "|||");
-                            data.Append("3_DebtorAddressTypeID===" + vendor_AssignmentRecord_v13.Addresses[arow].Debtor_Address_Type_Name);
-                        }
-                        data.Append("]]]");
-                    }
-                    #endregion
-
-                    #region ContactInformation
-                    if (vendor_AssignmentRecord_v13.ContactInformation != null && vendor_AssignmentRecord_v13.ContactInformation.Length > 0)
-                    {
-                        data.Append("[[[6_ContactInformation:::|||");
-                        for (int crow = 0; crow < vendor_AssignmentRecord_v13.ContactInformation.Length; crow++)
-                        {
-                            if (crow > 0) data.Append("|||___|||");
-                            data.Append("3_PersonTypeCode===" + vendor_AssignmentRecord_v13.ContactInformation[crow].Debtor_Type_Name + "|||");
-                            data.Append("3_Phone_Number===" + vendor_AssignmentRecord_v13.ContactInformation[crow].Phone_Number + "|||");
-                            data.Append("3_AddressTypeCode===" + vendor_AssignmentRecord_v13.ContactInformation[crow].Debtor_Address_Type_Name);
-                        }
-                        data.Append("]]]");
-                    }
-                    #endregion
 
                     TheFile.FileContent = data.ToString();
                 }

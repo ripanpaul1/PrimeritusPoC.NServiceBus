@@ -45,6 +45,18 @@
                         {
                             @Html.AntiForgeryToken()
                             <div>
+                                <div class="row" id="divRequestType">
+                                    <div class="col-md-12">
+                                        <br />
+                                        <div>
+                                            <div>Request Type</div>
+                                            <label style="font-weight: normal;">@Html.RadioButton("RequestType", "1", true)New Request</label>
+                                            &nbsp;&nbsp;
+                                            <label style="font-weight: normal;">@Html.RadioButton("RequestType", "2")Update Request</label>
+                                        </div>
+                                        <br />
+                                    </div>
+                                </div>
                                 <div class="row" id="divXmlBrowser">
                                     <div class="col-md-12">
                                         <br /><br />

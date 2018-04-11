@@ -36,11 +36,11 @@ namespace Lateetud.PrimeritusService.Manager.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult XmlService(HttpPostedFileBase[] files)
+        public ActionResult XmlService(HttpPostedFileBase[] files, string RequestType)
         {
             ViewBag.Title = "Simulator - Future State Prototype using NServiceBus";
             FileModelList fileModelList = null;
-            if (files[0] != null) fileModelList = new LateetudService().ReadXml(files, Server.MapPath("~/TempFiles"));
+            if (files[0] != null && RequestType != null) fileModelList = new LateetudService().ReadXml(files, Server.MapPath("~/TempFiles"), RequestType);
             return View("XmlService", fileModelList);
         }
         #endregion

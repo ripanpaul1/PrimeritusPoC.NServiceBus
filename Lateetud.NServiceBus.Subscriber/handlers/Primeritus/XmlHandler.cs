@@ -14,10 +14,10 @@ namespace Lateetud.NServiceBus.Subscriber
         {
             try
             {
-                FileModel TheFile = new PrimeritusXmlService().XmlToAuraString(message.Message);
+                FileModel TheFile = new PrimeritusXmlService().XmlToAuraString(message.Message, message.RequestType);
                 if (TheFile == null) return Task.FromCanceled(System.Threading.CancellationToken.None);
                 if (TheFile.Status == PStatus.Failed) return Task.FromCanceled(System.Threading.CancellationToken.None);
-                if (!new PrimeritusXmlService().IsSendAura(TheFile.FileContent)) return Task.FromCanceled(System.Threading.CancellationToken.None);
+                if (!new PrimeritusXmlService().IsSendAura(TheFile.FileContent, message.RequestType)) return Task.FromCanceled(System.Threading.CancellationToken.None);
                 return Task.CompletedTask;
             }
             catch

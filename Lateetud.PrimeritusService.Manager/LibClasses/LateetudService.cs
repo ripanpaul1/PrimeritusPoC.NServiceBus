@@ -577,7 +577,7 @@ namespace Lateetud.PrimeritusService.Manager.LibClasses
             return vMExcel;
         }
 
-        public FileModelList ReadXml(HttpPostedFileBase[] files, string DestinationPath)
+        public FileModelList ReadXml(HttpPostedFileBase[] files, string DestinationPath, string RequestType)
         {
             StaticUtilities.ProcessTimeFormat = PTime.Milliseconds;
 
@@ -614,7 +614,7 @@ namespace Lateetud.PrimeritusService.Manager.LibClasses
                         {
                             XmlDocument xmldoc = new XmlDocument();
                             xmldoc.Load(fileModelList.FileModels[TheFile].FilePath);
-                            string response = client.InvokeXmlService(xmldoc.InnerXml);
+                            string response = client.InvokeXmlService(xmldoc.InnerXml, RequestType);
                             if (response == "Published")
                             {
                                 fileModelList.FileModels[TheFile].Status = PStatus.Success;

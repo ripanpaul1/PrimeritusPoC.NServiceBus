@@ -36,12 +36,12 @@ namespace Lateetud.NServiceBus.Publisher.api
         }
 
         [WebMethod]
-        public string InvokeXmlService(string XmlString)
+        public string InvokeXmlService(string XmlString, string RequestType)
         {
             try
             {
                 var requestId = "ixs-" + Guid.NewGuid();
-                return msmqsqldbconfig.PublishedToBus(msmqsqldbconfig.ConfigureEndpoint("primeritus.publisher"), new VMXml { RequestID = requestId, Message = XmlString });
+                return msmqsqldbconfig.PublishedToBus(msmqsqldbconfig.ConfigureEndpoint("primeritus.publisher"), new VMXml { RequestID = requestId, Message = XmlString, RequestType = RequestType });
             }
             catch (Exception err)
             {

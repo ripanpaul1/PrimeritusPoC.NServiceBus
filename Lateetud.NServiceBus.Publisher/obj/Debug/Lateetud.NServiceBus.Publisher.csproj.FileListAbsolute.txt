@@ -1,5 +1,3 @@
-E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Publisher\obj\Debug\Lateetud.NServiceBus.Publisher.csprojResolveAssemblyReference.cache
-E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Publisher\obj\Debug\Lateetud.NServiceBus.Publisher.csproj.CoreCompileInputs.cache
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Publisher\bin\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Publisher\bin\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Drop.sql
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Publisher\bin\NServiceBus.Persistence.Sql\MsSqlServer\Subscription_Create.sql
@@ -33,5 +31,7 @@ E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Publisher\bin\NServ
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Publisher\bin\NServiceBus.Core.xml
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Publisher\bin\NServiceBus.Persistence.Sql.pdb
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Publisher\bin\NServiceBus.Persistence.Sql.xml
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Publisher\obj\Debug\Lateetud.NServiceBus.Publisher.csprojResolveAssemblyReference.cache
+E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Publisher\obj\Debug\Lateetud.NServiceBus.Publisher.csproj.CoreCompileInputs.cache
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Publisher\obj\Debug\Lateetud.NServiceBus.Publisher.dll
 E:\OfficeWork\PrimeritusPoC.NServiceBus\Lateetud.NServiceBus.Publisher\obj\Debug\Lateetud.NServiceBus.Publisher.pdb
